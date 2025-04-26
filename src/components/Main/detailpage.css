@@ -1,0 +1,318 @@
+/* Main page styling with background image */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("../../../public/Photos/Untitled-1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Detail page container styling */
+.detail-container {
+  background-color: #fff5e4;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px; /* Drastically reduced from 150px */
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 40px rgba(139, 69, 19, 0.3);
+  max-width: 1200px;
+  width: 95%;
+  min-height: auto; /* Changed from 85vh to auto to prevent excessive height */
+  position: relative;
+}
+
+/* Book title styling */
+.detail-container h1 {
+  color: #654321;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #deb887;
+  padding-bottom: 10px;
+  font-size: 2rem;
+}
+
+/* Strong tag styling */
+.detail-container strong {
+  color: #8b4513;
+  font-weight: 600;
+}
+
+/* Paragraph styling */
+.detail-container p {
+  color: #6b4226;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Book image styling */
+.detail-container img {
+  box-shadow: 0 10px 20px rgba(139, 69, 19, 0.3);
+  border: 5px solid white;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  display: block; /* Ensure proper alignment */
+}
+
+/* Section headings */
+.detail-container h5 {
+  color: #a0522d;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* Rating display styling */
+.detail-container .average-rating {
+  font-size: 1.2rem;
+  color: #b8860b;
+}
+
+/* Radio button container styling */
+.radio-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+/* Generic button styling */
+.detail-container button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.detail-container button:hover {
+  background-color: #654321;
+  transform: translateY(-2px);
+}
+
+/* Bookmark component styles (from Uiverse.io by vinodjangid07) */
+#checkboxInput {
+  display: none;
+}
+
+.bookmark {
+  cursor: pointer;
+  background-color: teal;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.svgIcon path {
+  stroke-dasharray: 200 0;
+  stroke-dashoffset: 0;
+  stroke: white;
+  fill: #dddddd00;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+}
+
+#checkboxInput:checked ~ .svgIcon path {
+  fill: white;
+  animation: bookmark 0.5s linear;
+  transition-delay: 0.5s;
+}
+
+@keyframes bookmark {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: 80;
+  }
+  100% {
+    stroke-dasharray: 200 0;
+  }
+}
+
+/* Switch component styling */
+.switch-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.switch-container label {
+  margin-left: 10px;
+  color: #8b4513;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Reviews section styling */
+.detail-container h2 {
+  color: #8b4513;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #deb887;
+  padding-bottom: 10px;
+}
+
+/* Individual review styling */
+.list-group {
+  background-color: #fff9f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.15);
+}
+
+.list-group-item {
+  background-color: #fffaf0;
+  border: none;
+  border-bottom: 1px dashed #deb887;
+  padding: 15px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: #fff5e4;
+}
+
+/* Review user name styling */
+.list-group-item strong {
+  color: #654321;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Review rating stars */
+.list-group-item p:nth-of-type(1) {
+  color: #daa520;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* Review date styling */
+.list-group-item p:nth-of-type(2) {
+  color: #a0522d;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* Review comment text */
+.list-group-item p:nth-of-type(3) {
+  color: #6b4226;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* No reviews message */
+.list-group-item:first-child:last-child p {
+  color: #a0522d;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Write review form */
+.form {
+  background-color: #fff5e4;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.form h2 {
+  color: #8b4513;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #deb887;
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+.form label {
+  color: #a0522d;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form .form-control {
+  border: 1px solid #deb887;
+  background-color: #fffaf0;
+  color: #654321;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.form .form-control:focus {
+  border-color: #b8860b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.25);
+}
+
+.form textarea.form-control {
+  padding: 10px;
+  resize: vertical;
+}
+
+.form .btn-primary {
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.form .btn-primary:hover {
+  background-color: #8b4513;
+  transform: translateY(-2px);
+}
+
+/* Error message styling */
+.text-danger {
+  color: #c73e1d !important;
+  margin: 8px 0;
+  padding: 8px 10px;
+  background-color: rgba(199, 62, 29, 0.1);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px; /* Further reduced for mobile */
+    width: 90%;
+  }
+  
+  .detail-container h1 {
+    font-size: 1.7rem;
+  }
+  
+  .detail-container img {
+    max-width: 100%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+}

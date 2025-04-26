@@ -1,0 +1,77 @@
+/* Apply background image to the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../../../public/Photos/Untitled-1.png'); 
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* The box where the form will go */
+  .add-book-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 400px;
+    background-color: #fff5e4; /* Solid background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Style for the heading */
+  .add-book-box h1 {
+    margin-bottom: 20px;
+    color: #333; /* Darker text for contrast */
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Darker text for contrast */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  

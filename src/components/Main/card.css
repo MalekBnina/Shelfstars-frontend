@@ -1,0 +1,106 @@
+.card {
+    width: 360px;
+    height: 530px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #deb887; /* Burlywood border */
+    box-shadow: 5px 5px 10px rgba(139, 69, 19, 0.2),
+      -5px -5px 10px rgba(139, 69, 19, 0.05);
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .front-page,
+  .back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+  
+  .front-page {
+    background-size: cover;
+    background-color: white;
+  }
+  
+  .card-info {
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+    color: #8b4513; /* Dark brown */
+    text-shadow: 1px 1px rgba(139, 69, 19, 0.3);
+    text-align: center;
+  }
+  
+  .card-rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #b8860b; /* DarkGoldenRod */
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #654321; /* Dark brown */
+  }
+  
+  .card-subtitle {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #a0522d; /* Sienna */
+  }
+  
+  .back-page {
+    background-color: #fff5e4; /* Your specified color */
+    color: #5e2f00; /* Deep brown */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.1);
+  }
+  
+  .card-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #6b3000; /* Darker brown */
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #8b4513; /* Dark brown */
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .card-button {
+    background-color: #8b4513; /* Dark brown */
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .card-button:hover {
+    background-color: transparent;
+    color: #8b4513; /* Dark brown */
+    border: 1px solid #8b4513; /* Dark brown */
+  }

@@ -1,0 +1,172 @@
+/* Background for the entire page - this will work with your background image */
+body {
+    background-image: url("../../../public/Photos/Untitled-1.png");
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff5e4;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navLeft, .navCenter, .navRight {
+    display: flex;
+    align-items: center;
+}
+
+.navCenter {
+    position: relative;
+}
+
+.navLink {
+    color: #8b4513; /* Dark brown */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    background-color: #ffe0b5; /* Lighter brown */
+    color: #6b3000; /* Darker brown */
+}
+
+/* Dropdown menu styling */
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff5e4;
+    border: 1px solid #deb887; /* Burlywood */
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 220px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+    z-index: 1001;
+}
+
+.dropdownItem {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #8b4513;
+    transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+    background-color: #ffe0b5;
+}
+
+/* Search box styling */
+.search {
+    position: relative;
+    margin-left: 15px;
+}
+
+.searchInput {
+    padding: 8px 12px;
+    width: 200px;
+    border: 1px solid #deb887;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    width: 240px;
+    border-color: #cd853f; /* Peru */
+    box-shadow: 0 0 5px rgba(205, 133, 63, 0.3);
+}
+
+/* Content container (for the background image) */
+.contentContainer {
+    padding: 30px;
+    min-height: calc(100vh - 70px); /* Adjust based on navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Content box styling */
+.contentBox {
+    background-color: #fff5e4;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.2);
+}
+
+/* Card styling (assuming you have Card components) */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(139, 69, 19, 0.15);
+}
+
+/* Book details styling */
+.bookTitle {
+    color: #5e2f00; /* Deep brown */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bookDescription {
+    color: #6b4226; /* Medium brown */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bookRating {
+    color: #b6772e; /* Golden brown */
+    font-weight: 600;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navLeft, .navCenter, .navRight {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .searchInput {
+        width: 100%;
+    }
+
+    .contentBox {
+        padding: 15px;
+    }
+}

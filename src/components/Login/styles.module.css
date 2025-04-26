@@ -1,0 +1,139 @@
+.login_container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fff5e4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+}
+
+.login_form_container {
+	width: 100%;
+	max-width: 900px;
+	min-height: 500px;
+	display: flex;
+	flex-direction: row;
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.left {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fffaf3;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 20px;
+}
+
+.form_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.form_container h1 {
+	font-size: clamp(24px, 5vw, 40px);
+	margin-top: 0;
+	text-align: center;
+}
+
+.input {
+	outline: none;
+	border: none;
+	width: 100%;
+	max-width: 370px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #f3ebe7;
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+.error_msg {
+	width: 100%;
+	max-width: 370px;
+	padding: 15px;
+	margin: 5px 0;
+	font-size: 14px;
+	background-color: #b35c4a;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #8b5e3c;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 20px;
+}
+
+.right h1 {
+	margin-top: 0;
+	color: white;
+	font-size: clamp(24px, 5vw, 40px);
+	align-self: center;
+	text-align: center;
+}
+
+.white_btn,
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: white;
+	border-radius: 20px;
+	width: 100%;
+	max-width: 180px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.green_btn {
+	background-color: #8b5e3c;
+	color: white;
+	margin: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+	.login_form_container {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	
+	.left {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	
+	.right {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.input, .error_msg {
+		max-width: 100%;
+	}
+	
+	.white_btn, .green_btn {
+		max-width: 100%;
+	}
+}
