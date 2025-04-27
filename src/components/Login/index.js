@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // Adjust URL to match your backend API
-      const url = "http://localhost:8080/api/auth/login"; 
+      const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/auth/login`; 
       const { data: res } = await axios.post(url, data);
       
       localStorage.setItem(process.env.REACT_APP_TOKEN_NAME || "token", res.data.token);

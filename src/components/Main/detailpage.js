@@ -30,7 +30,7 @@ const DetailPage = () => {
 
         // Fetch reviews from backend (ensure backend route is correct)
         try {
-          const reviewsResponse = await axios.get(`http://localhost:8080/api/reviews/${id}`);
+          const reviewsResponse = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/reviews/${id}`);
           setReviews(reviewsResponse.data); // Set the reviews
         } catch (reviewErr) {
           console.log("No reviews yet or error fetching reviews");
@@ -67,7 +67,7 @@ const DetailPage = () => {
 
       // Send full book info to backend with token
       await axios.post(
-        "http://localhost:8080/api/save",
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/save`,
         { title, authors, description, infoLink, image, bookId }, // First object (data)
         { headers: { Authorization: `Bearer ${token}` } } // Second object (config)
       );
@@ -83,14 +83,14 @@ const DetailPage = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:8080/api/reviews/${id}`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/reviews/${id}`,
         { rating, comment },
         { headers: { Authorization: `Bearer ${token}` } } // Add token to request headers
       );
       setComment(""); // Reset comment field
       setRating(3); // Reset rating
       setError(""); // Reset error
-      const { data } = await axios.get(`http://localhost:8080/api/reviews/${id}`); // Re-fetch reviews
+      const { data } = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/reviews/${id}`); // Re-fetch reviews
       setReviews(data);
     } catch (err) {
       setError("Could not submit review."); // Handle review submission error

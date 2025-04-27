@@ -34,7 +34,7 @@ function AddBook() {
 
     // Send the data to the backend
     try {
-      const response = await fetch("http://localhost:8080/api/book/add", {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/book/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

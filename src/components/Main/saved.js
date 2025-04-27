@@ -17,7 +17,7 @@ const SavedBooks = () => {
         setLoading(true); // Set loading to true when fetching data
 
         // Fetch saved books from backend API
-        const savedRes = await axios.get("http://localhost:8080/api/save", {
+        const savedRes = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/save`, {
           headers: { Authorization: `Bearer ${token}` }, // Pass token in Authorization header
         });
 

@@ -20,12 +20,12 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users/register";
+      const url = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}}/users/register`;
       const { data: res } = await axios.post(url, data);
       console.log(res.message);
 
       try {
-        const loginUrl = "http://localhost:8080/api/auth";
+        const loginUrl = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}}/auth`;
         const loginData = { email: data.email, password: data.password };
         const loginRes = await axios.post(loginUrl, loginData);
 
